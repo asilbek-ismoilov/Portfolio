@@ -9,8 +9,8 @@ class ResumeCategory(models.Model):
 
 class Resume(models.Model):
     date = models.CharField(max_length=50)
-    name = models.EmailField(max_length=70)
-    company = models.EmailField(max_length=70)
+    name = models.CharField(max_length=100)
+    company = models.CharField(max_length=100)
     dictionary = models.TextField()
     category = models.ForeignKey(ResumeCategory,on_delete=models.CASCADE)
 
@@ -25,8 +25,8 @@ class WorkCategory(models.Model):
 
 
 class Work(models.Model):
+    image = models.ImageField(upload_to='Images/blog')
     image = models.CharField(max_length=50)
-    name = models.EmailField(max_length=70)
     category = models.ForeignKey(WorkCategory,on_delete=models.CASCADE)
 
     def __str__(self):
