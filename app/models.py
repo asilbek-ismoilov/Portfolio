@@ -1,18 +1,19 @@
 from django.db import models
 
-
-class ResumeCategory(models.Model):
-    name = models.CharField(max_length=50)
-    def __str__(self):
-        return f"{self.name}"
-
-
-class Resume(models.Model):
+class Experience(models.Model):
     date = models.CharField(max_length=50)
     name = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
     dictionary = models.TextField()
-    category = models.ForeignKey(ResumeCategory,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.name} ({self.company})"
+    
+class Education(models.Model):
+    date = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
+    company = models.CharField(max_length=100)
+    dictionary = models.TextField()
 
     def __str__(self):
         return f"{self.name} ({self.company})"
@@ -25,7 +26,7 @@ class WorkCategory(models.Model):
 
 
 class Work(models.Model):
-    image = models.ImageField(upload_to='Images/blog')
+    image = models.ImageField(upload_to='Images/work')
     image = models.CharField(max_length=50)
     category = models.ForeignKey(WorkCategory,on_delete=models.CASCADE)
 

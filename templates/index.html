@@ -76,7 +76,7 @@
 	<!--
 		Favicons
 	-->
-	<link rel="shortcut icon" href="images/favicons/favicon.ico">
+	<link rel="shortcut icon" href="{% static 'images/favicons/favicon.ico">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125314689-11"></script>
@@ -195,7 +195,7 @@
 				<div class="profile no-photo">
 
 					<!-- profile image -->
-					<div class="slide" style="background-image: url(images/profile6.jpg);"></div>
+					<div class="slide" style="background-image: url({% static 'images/profile6.jpg' %});"></div>
 
 					<!-- profile titles -->
 					<div class="title">Demetrius Bernard</div>
@@ -339,7 +339,7 @@
 									</div>
 									<div class="user">
 										<div class="img">
-											<img src="images/profile.png" alt="Ryan Adlard" />
+											<img src="{% static 'images/profile.png' }" alt="Ryan Adlard" />
 										</div>
 										<div class="info">
 											<div class="name">Ryan Adlard</div>
@@ -529,7 +529,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="images/clients/client_1.png" alt="" />
+											<img src="{% static 'images/clients/client_1.png' }" alt="" />
 										</a>
 									</div>
 								</div>
@@ -540,7 +540,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="images/clients/client_2.png" alt="" />
+											<img src="{% static 'images/clients/client_2.png' }" alt="" />
 										</a>
 									</div>
 								</div>
@@ -551,7 +551,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="images/clients/client_3.png" alt="" />
+											<img src="{% static 'images/clients/client_3.png' }" alt="" />
 										</a>
 									</div>
 								</div>
@@ -562,7 +562,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="images/clients/client_4.png" alt="" />
+											<img src="{% static 'images/clients/client_4.png' }" alt="" />
 										</a>
 									</div>
 								</div>
@@ -600,14 +600,15 @@
 									<div class="name">Experience</div>
 								</div>
 								<div class="resume-items">
-									{% for resume in resumes %}
-											<div class="resume-item border-line-h">
-												<div class="date">{{ resume.date }}</div>
-												<div class="name">{{ resume.name }}</div>
-												<div class="company">{{ resume.company }}</div>
-												<p>{{ resume.dictionary }}</p>
-											</div>
-									{% endfor %}
+								{% for experience in experiences %}
+										<div class="resume-item border-line-h">
+											<div class="date">{{ experience.date }}</div>
+											<div class="name">{{ experience.name }}</div>
+											<div class="company">{{ experience.company }}</div>
+											<p>{{ experience.dictionary }}</p>
+										</div>
+								{% endfor %}
+								
 									<div class="resume-item border-line-h">
 										<div class="date">2011 - 2012</div>
 										<div class="name">Team Leader</div>
@@ -801,7 +802,7 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="images/man1.jpg" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
 													<div class="info">
 														<div class="name">Helen Floyd</div>
 														<div class="company">Art Director</div>
@@ -817,7 +818,7 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="images/man1.jpg" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
 													<div class="info">
 														<div class="name">Robert Chase</div>
 														<div class="company">CEO</div>
@@ -833,7 +834,7 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="images/man1.jpg" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
 													<div class="info">
 														<div class="name">Helen Floyd</div>
 														<div class="company">Art Director</div>
@@ -888,15 +889,15 @@
 							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
 								<div class="box-item">
 									<div class="image">
-										<a href="images/wwork1.jpg" class="has-popup-image">
-											<img src="images/wwork1.jpg" alt="" />
+										<a href="{{work.url.image}}" class="has-popup-image">
+											<img src="{% static 'images/wwork1.jpg' }" alt="" />
 											<span class="info">
 												<span class="ion ion-image"></span>
 											</span>
 										</a>
 									</div>
 									<div class="desc">
-										<a href="images/wwork1.jpg" class="name has-popup-image">Best Resumes
+										<a href="{% static 'images/wwork1.jpg' }" class="name has-popup-image">Best Resumes
 											Writing</a>
 										<div class="category">Image</div>
 									</div>
@@ -931,7 +932,7 @@
 								<div class="box-item">
 									<div class="image">
 										<a href="blog-post-new.html">
-											<img src="images/blog/blog1.jpg" alt="By spite about do of allow" />
+											<img src="{% static 'images/blog/blog1.jpg' }" alt="By spite about do of allow" />
 											<span class="info">
 												<span class="ion ion-document-text"></span>
 											</span>
@@ -954,7 +955,7 @@
 								<div class="box-item">
 									<div class="image">
 										<a href="blog-post-new.html">
-											<img src="images/blog/blog2.jpg" alt="By spite about do of allow" />
+											<img src="{% static 'images/blog/blog2.jpg' }" alt="By spite about do of allow" />
 											<span class="info">
 												<span class="ion ion-document-text"></span>
 											</span>
@@ -977,7 +978,7 @@
 								<div class="box-item">
 									<div class="image">
 										<a href="blog-post-new.html">
-											<img src="images/blog/blog3.jpg" alt="By spite about do of allow" />
+											<img src="{% static 'images/blog/blog3.jpg' }" alt="By spite about do of allow" />
 											<span class="info">
 												<span class="ion ion-document-text"></span>
 											</span>
@@ -1000,7 +1001,7 @@
 								<div class="box-item">
 									<div class="image">
 										<a href="blog-post-new.html">
-											<img src="images/blog/blog1.jpg" alt="By spite about do of allow" />
+											<img src="{% static 'images/blog/blog1.jpg' }" alt="By spite about do of allow" />
 											<span class="info">
 												<span class="ion ion-document-text"></span>
 											</span>

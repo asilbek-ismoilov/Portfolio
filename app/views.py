@@ -1,23 +1,28 @@
 from django.shortcuts import render
-from .models import ResumeCategory, Resume, WorkCategory, Work, Blog, Contact
+from .models import Experience, Education, WorkCategory, Work, Blog, Contact
 
 def index_view(request):
-    resume = Resume.objects.all()
-    work = Work.objects.all()
-    contact = Contact.objects.all()
-    blog = Blog.objects.all()
-    workcateg = WorkCategory.objects.all()
+    experiences = Experience.objects.all()
+    works = Work.objects.all()
+    contacts = Contact.objects.all()
+    workcategs = WorkCategory.objects.all()
+    educations = Education.objects.all()
+
     context = {
-        "resumes": resume,
-        "works" : work,
-        "contacts" : contact,
-        "blogs" : blog,
-        "workcategs": workcateg,
+        "experiences": experiences,
+        "works": works,
+        "contacts": contacts,
+        "workcategs": workcategs,
+        "educations": educations
     }
     return render(request, "index.html", context)
 
 def blog_view(request):
-    return render(request, "blog.html")
+    blog = Blog.objects.all()
+    context = {
+    "blogs" : blog,
+    }
+    return render(request, "blog.html", context)
 
 
 

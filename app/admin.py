@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import ResumeCategory, Resume, WorkCategory, Work, Blog, Contact
+from .models import Experience, Education, WorkCategory, Work, Blog, Contact
 from django.utils.html import format_html
 
-admin.site.register((ResumeCategory, Resume, WorkCategory, Work, Contact)) 
+admin.site.register((Experience, Education, WorkCategory, Work, Contact)) 
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
