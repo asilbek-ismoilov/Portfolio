@@ -155,7 +155,7 @@
 								<span class="link">About</span>
 							</a>
 						</li>
-						<li>
+						<li> 	
 							<a href="#resume-card">
 								<span class="icon ion-android-list"></span>
 								<span class="link">Resume</span>
@@ -339,7 +339,7 @@
 									</div>
 									<div class="user">
 										<div class="img">
-											<img src="{% static 'images/profile.png' }" alt="Ryan Adlard" />
+											<img src="{% static 'images/profile.png' %}" alt="Ryan Adlard" />
 										</div>
 										<div class="info">
 											<div class="name">Ryan Adlard</div>
@@ -529,7 +529,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="{% static 'images/clients/client_1.png' }" alt="" />
+											<img src="{% static 'images/clients/client_1.png' %}" alt="" />
 										</a>
 									</div>
 								</div>
@@ -540,7 +540,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="{% static 'images/clients/client_2.png' }" alt="" />
+											<img src="{% static 'images/clients/client_2.png' %}" alt="" />
 										</a>
 									</div>
 								</div>
@@ -551,7 +551,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="{% static 'images/clients/client_3.png' }" alt="" />
+											<img src="{% static 'images/clients/client_3.png' %}" alt="" />
 										</a>
 									</div>
 								</div>
@@ -562,7 +562,7 @@
 								<div class="client-item">
 									<div class="image">
 										<a target="_blank" href="https://www.google.com/">
-											<img src="{% static 'images/clients/client_4.png' }" alt="" />
+											<img src="{% static 'images/clients/client_4.png' %}" alt="" />
 										</a>
 									</div>
 								</div>
@@ -592,7 +592,7 @@
 
 						<!-- content -->
 						<div class="row">
-						
+
 							<!-- experience -->
 							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
 								<div class="resume-title border-line-h">
@@ -600,34 +600,18 @@
 									<div class="name">Experience</div>
 								</div>
 								<div class="resume-items">
-								{% for experience in experiences %}
-										<div class="resume-item border-line-h">
-											<div class="date">{{ experience.date }}</div>
-											<div class="name">{{ experience.name }}</div>
-											<div class="company">{{ experience.company }}</div>
-											<p>{{ experience.dictionary }}</p>
-										</div>
-								{% endfor %}
-								
+									{% for experience in experiences %}
 									<div class="resume-item border-line-h">
-										<div class="date">2011 - 2012</div>
-										<div class="name">Team Leader</div>
-										<div class="company">ABC Inc.</div>
-										<p>
-											A team leader is responsible for guiding a group of employees as they complete a project.
-										</p>
+										<div class="date">{{ experience.date }}</div>
+										<div class="name">{{ experience.name }}</div>
+										<div class="company">{{ experience.company }}</div>
+										<p>{{ experience.dictionary }}</p>
 									</div>
-									<div class="resume-item">
-										<div class="date">2009 - 2010</div>
-										<div class="name">Business Writer</div>
-										<div class="company">Writer Corporation.</div>
-										<p>
-											Corporate writing is writing for business purposes.
-										</p>
-									</div>
+									{% endfor %}
+
 								</div>
 							</div>
-						
+
 							<!-- education -->
 							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
 								<div class="resume-title border-line-h">
@@ -635,32 +619,17 @@
 									<div class="name">Education</div>
 								</div>
 								<div class="resume-items">
+									{% for education in educations %}
 									<div class="resume-item border-line-h">
-										<div class="date">2006 - 2008</div>
-										<div class="name">New York University</div>
-										<div class="company">New York</div>
-										<p>
-											New York University offers 2 Creative Writing Degree programs. It's a large private university in a
-											large city.
-										</p>
+										<div class="date">{{ education.date }}</div>
+										<div class="name">{{ education.name }}</div>
+										<div class="company">{{ education.company }}</div>
+										<p>{{ education.dictionary }}</p>
 									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">2005 - 2006</div>
-										<div class="name">Writing Course</div>
-										<div class="company">London</div>
-										<p>
-											Creative writing short courses is taught at City, University of London. Develop writing skills with
-											professional and published authors.
-										</p>
-									</div>
-									<div class="resume-item">
-										<div class="date">2004 - 2005</div>
-										<div class="name">New York School</div>
-										<div class="company">Brooklyn, NY, United States</div>
-									</div>
+									{% endfor %}
 								</div>
 							</div>
-						
+
 							<div class="clear"></div>
 						</div>
 
@@ -802,7 +771,8 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' %}" alt="" />
+													</div>
 													<div class="info">
 														<div class="name">Helen Floyd</div>
 														<div class="company">Art Director</div>
@@ -818,7 +788,8 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' %}" alt="" />
+													</div>
 													<div class="info">
 														<div class="name">Robert Chase</div>
 														<div class="company">CEO</div>
@@ -834,7 +805,8 @@
 													dolor sit amet, consectetur adipiscing elit.
 												</div>
 												<div class="user">
-													<div class="img"><img src="{% static 'images/man1.jpg' }" alt="" /></div>
+													<div class="img"><img src="{% static 'images/man1.jpg' %}" alt="" />
+													</div>
 													<div class="info">
 														<div class="name">Helen Floyd</div>
 														<div class="company">Art Director</div>
@@ -874,9 +846,9 @@
 							<div class="f_btn active">
 								<label><input type="radio" name="fl_radio" value="grid-item" />All</label>
 							</div>
-							{% for workcategs in workcategs %}
+							{% for workcateg in workcategs %}
 							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="{{category.name}}" />{{category.name}}</label>
+								<label><input type="radio" name="fl_radio" value="{{ workcateg.name }}" />{{ workcateg.name }}</label>
 							</div>
 							{% endfor %}
 						</div>
@@ -886,24 +858,24 @@
 
 							<!-- work item photo -->
 							{% for work in works %}
-							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item {{ work.category }} border-line-h">
 								<div class="box-item">
 									<div class="image">
-										<a href="{{work.url.image}}" class="has-popup-image">
-											<img src="{% static 'images/wwork1.jpg' }" alt="" />
+										<a href="{{ work.image.url }}" class="has-popup-image">
+											<img src="{{ work.image.url }}" alt="" />
 											<span class="info">
 												<span class="ion ion-image"></span>
 											</span>
 										</a>
 									</div>
 									<div class="desc">
-										<a href="{% static 'images/wwork1.jpg' }" class="name has-popup-image">Best Resumes
-											Writing</a>
-										<div class="category">Image</div>
+										<a href="{{ work.image.url }}" class="name has-popup-image">{{ work.name }}</a>
+										<div class="category">{{ work.category }}</div>
 									</div>
 								</div>
 							</div>
 							{% endfor %}
+
 							<div class="clear"></div>
 						</div>
 					</div>
@@ -928,97 +900,30 @@
 						<!-- content -->
 						<div class="row border-line-v">
 							<!-- blog item -->
+							{% for blog in blogs %}
 							<div class="col col-d-6 col-t-6 col-m-12">
 								<div class="box-item">
 									<div class="image">
-										<a href="blog-post-new.html">
-											<img src="{% static 'images/blog/blog1.jpg' }" alt="By spite about do of allow" />
+										<a href="{% url 'blogs-page' blog.slug %}">
+											<img src="{{ blog.image.url }}"
+												alt="By spite about do of allow" />
 											<span class="info">
 												<span class="ion ion-document-text"></span>
 											</span>
 										</a>
 									</div>
 									<div class="desc">
-										<a href="blog-post-new.html">
-											<span class="date">April 28, 2020</span>
+										<a href="{% url 'blogs-page' blog.slug %}">
+											<span class="date">{{ blog.date }}</span>
 										</a>
-										<a href="blog-post-new.html" class="name">By spite about do of allow</a>
+										<a href="{% url 'blogs-page' blog.slug %}" class="name">{{ blog.title }}</a>
 										<div class="text">
-											<p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril
-												ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
+											<p>{{ blog.content }}&#8230;</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- blog item -->
-							<div class="col col-d-6 col-t-6 col-m-12">
-								<div class="box-item">
-									<div class="image">
-										<a href="blog-post-new.html">
-											<img src="{% static 'images/blog/blog2.jpg' }" alt="By spite about do of allow" />
-											<span class="info">
-												<span class="ion ion-document-text"></span>
-											</span>
-										</a>
-									</div>
-									<div class="desc">
-										<a href="blog-post-new.html">
-											<span class="date">April 28, 2020</span>
-										</a>
-										<a href="blog-post-new.html" class="name">By spite about do of allow</a>
-										<div class="text">
-											<p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril
-												ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- blog item -->
-							<div class="col col-d-6 col-t-6 col-m-12">
-								<div class="box-item">
-									<div class="image">
-										<a href="blog-post-new.html">
-											<img src="{% static 'images/blog/blog3.jpg' }" alt="By spite about do of allow" />
-											<span class="info">
-												<span class="ion ion-document-text"></span>
-											</span>
-										</a>
-									</div>
-									<div class="desc">
-										<a href="blog-post-new.html">
-											<span class="date">April 28, 2020</span>
-										</a>
-										<a href="blog-post-new.html" class="name">By spite about do of allow</a>
-										<div class="text">
-											<p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril
-												ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- blog item -->
-							<div class="col col-d-6 col-t-6 col-m-12">
-								<div class="box-item">
-									<div class="image">
-										<a href="blog-post-new.html">
-											<img src="{% static 'images/blog/blog1.jpg' }" alt="By spite about do of allow" />
-											<span class="info">
-												<span class="ion ion-document-text"></span>
-											</span>
-										</a>
-									</div>
-									<div class="desc">
-										<a href="blog-post-new.html">
-											<span class="date">April 28, 2020</span>
-										</a>
-										<a href="blog-post-new.html" class="name">By spite about do of allow</a>
-										<div class="text">
-											<p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril
-												ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
-										</div>
-									</div>
-								</div>
-							</div>
+							{% endfor %}
 							<div class="clear"></div>
 						</div>
 

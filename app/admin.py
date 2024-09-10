@@ -6,9 +6,6 @@ admin.site.register((Experience, Education, WorkCategory, Work, Contact))
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('img','title','category_name')
+    list_display = ('img','title','date')
     def img(self, obj):
          return format_html('<img width="100" height="100" src="{}"style="border-radius: 50%;" />'.format(obj.image.url))
-
-    def category_name(self, obj):
-        return obj.category.name

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 class Experience(models.Model):
     date = models.CharField(max_length=50)
@@ -27,8 +28,8 @@ class WorkCategory(models.Model):
 
 class Work(models.Model):
     image = models.ImageField(upload_to='Images/work')
-    image = models.CharField(max_length=50)
-    category = models.ForeignKey(WorkCategory,on_delete=models.CASCADE)
+    category = models.ForeignKey(WorkCategory, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100) 
 
     def __str__(self):
         return f"{self.name} ({self.category})"
@@ -36,12 +37,18 @@ class Work(models.Model):
 
 class Blog(models.Model):
     image = models.ImageField(upload_to='Images/blog')
-    created_date = models.DateTimeField(auto_now=True)
+    date = models.DateField(auto_now=True)
     title = models.CharField(max_length=150)
     content = models.TextField() 
+    slug = models.SlugField(unique=True, blank=True) 
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"{self.title} ({self.created_date})"
+        return f"{self.title} ({self.date})"
 
 class Contact(models.Model):
     name = models.CharField(max_length=50)
@@ -50,4 +57,3 @@ class Contact(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.email})"
-    

@@ -135,31 +135,31 @@
 				<div class="top-menu">
 					<ul>
 						<li class="active">
-							<a href="#about-card">
+							<a href="{% url 'home-page' %}#about-card">
 								<span class="icon ion-person"></span>
 								<span class="link">About</span>
 							</a>
 						</li>
 						<li>
-							<a href="#resume-card">
+							<a href="{% url 'home-page' %}#resume-card">
 								<span class="icon ion-android-list"></span>
 								<span class="link">Resume</span>
 							</a>
 						</li>
 						<li>
-							<a href="#works-card">
+							<a href="{% url 'home-page' %}#works-card">
 								<span class="icon ion-android-create"></span>
 								<span class="link">Works</span>
 							</a>
 						</li>
 						<li>
-							<a href="#blog-card">
+							<a href="{% url 'home-page' %}#blog-card">
 								<span class="icon ion-chatbox-working"></span>
 								<span class="link">Blog</span>
 							</a>
 						</li>
 						<li>
-							<a href="#contacts-card">
+							<a href="{% url 'home-page' %}#contacts-card">
 								<span class="icon ion-at"></span>
 								<span class="link">Contact</span>
 							</a>
@@ -237,55 +237,20 @@
 								<div class="post-box">
 
 									<!-- blog detail -->
-									<h1 class="h-title">Procuring Education on Consulted Assurance in Do</h1>
+									<h1 class="h-title">{{ blog.title }}</h1>
 									<div class="blog-detail">
-										<span class="date">April 28, 2020</span>
-										<span class="cat-links"><a href="#">Design</a>, <a href="#">Music</a></span>
-										<span class="byline"> by <span class="author"><a
-													href="#">admin</a></span></span>
+										<span class="date">{{ blog.date }}</span>
 									</div>
 
 									<!-- blog image -->
 									<div class="blog-image">
-										<img src="{% static 'images/blog/blog1.jpg' }" alt="" />
+										<img src="{{ blog.image.url }}" alt="" />
 									</div>
 
 									<!-- blog content -->
 									<div class="blog-content">
 										<p>
-											So striking at of to welcomed resolved. Northward by described up household
-											therefore
-											attention. Excellence decisively nay man yet impression for contrasted
-											remarkably.
-										</p>
-										<p>
-											Forfeited you engrossed but gay sometimes explained. Another as studied it
-											to evident.
-											Merry sense given he be arise. Conduct at an replied removal an amongst.
-											Remaining
-											determine few her two cordially admitting old.
-										</p>
-										<blockquote>
-											Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-											cubilia
-											Curae; Pellentesque suscipit.
-										</blockquote>
-										<p>
-											Tiled say decay spoil now walls meant house. My mr interest thoughts
-											screened of outweigh
-											removing. Evening society musical besides inhabit ye my. Lose hill well up
-											will he over on.
-											Increasing sufficient everything men him admiration unpleasing sex.
-										</p>
-										<ul class="list-style">
-											<li>Greatest properly off ham exercise all.</li>
-											<li>Unsatiable invitation its possession nor off.</li>
-											<li>All difficulty estimating unreserved increasing the solicitude.</li>
-										</ul>
-										<p>
-											Unpleasant astonished an diminution up partiality. Noisy an their of meant.
-											Death means
-											up civil do an offer wound of.
+											{{ blog.content }}
 										</p>
 									</div>
 
@@ -303,136 +268,8 @@
 											<a class="share-btn share-btn-pinterest" title="Share on Pinterest"><i
 													class="ion ion-social-pinterest"></i></a>
 										</div>
-										<span class="tags-links">Taggs: <a href="#">code</a><a href="#">html</a><a
-												href="#">plugin</a><a href="#">wordpress</a></span>
 									</div>
 
-								</div>
-							</div>
-						</div>
-
-						<nav class="navigation post-navigation">
-							<div class="nav-links">
-								<div class="nav-previous"><a href="#"><span
-											class="post-nav-next post-nav-text">Prev</span></a></div>
-								<div class="nav-next"><a href="#"><span
-											class="post-nav-prev post-nav-text">Next</span></a></div>
-							</div>
-						</nav>
-
-						<div class="post-comments">
-							<div class="title">
-								<div class="title_inner">3 Comments</div>
-							</div>
-							<div class="row border-line-v comments-row">
-								<div class="col col-m-12 col-t-12 col-d-12">
-									<ul class="comments">
-										<li class="comment post-comment">
-											<div class="comment">
-												<div class="comment-image image">
-													<img src="{% static 'images/man1.jpg' }" class="avatar" height="80" width="80"
-														alt="" />
-												</div>
-												<div class="comment-desc desc">
-													<div class="comment-name name">
-														<span class="comment-author">John Doe</span>
-														<span class="comment-time">8:16 pm</span>
-														<span class="comment-date">April 28, 2020</span>
-														<span class="comment-reply">
-															<a class="comment-reply-link" href="#">Reply</a>
-														</span>
-													</div>
-													<div class="comment-text">
-														<p>An has alterum nominavi. Nam at elitr veritus voluptaria. Cu
-															eum regione tacimates vituperatoribus, ut mutat delenit est.
-														</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<ul class="children">
-											<li class="comment post-comment">
-												<div class="comment">
-													<div class="comment-image image">
-														<img src="{% static 'images/man1.jpg' }" class="avatar" height="80" width="80"
-															alt="" />
-													</div>
-													<div class="comment-desc desc">
-														<div class="comment-name name">
-															<span class="comment-author">John Doe</span>
-															<span class="comment-time">8:16 pm</span>
-															<span class="comment-date">April 28, 2020</span>
-															<span class="comment-reply">
-																<a class="comment-reply-link" href="#">Reply</a>
-															</span>
-														</div>
-														<div class="comment-text">
-															<p>An has alterum nominavi. Nam at elitr veritus voluptaria.
-																Cu eum regione tacimates vituperatoribus, ut mutat
-																delenit est.</p>
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
-										<li class="comment post-comment">
-											<div class="comment">
-												<div class="comment-image image">
-													<img src="{% static 'images/man1.jpg' }" class="avatar" height="80" width="80"
-														alt="" />
-												</div>
-												<div class="comment-desc desc">
-													<div class="comment-name name">
-														<span class="comment-author">John Doe</span>
-														<span class="comment-time">8:16 pm</span>
-														<span class="comment-date">April 28, 2020</span>
-														<span class="comment-reply">
-															<a class="comment-reply-link" href="#">Reply</a>
-														</span>
-													</div>
-													<div class="comment-text">
-														<p>An has alterum nominavi. Nam at elitr veritus voluptaria. Cu
-															eum regione tacimates vituperatoribus, ut mutat delenit est.
-														</p>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="post-comments">
-							<div class="title">Leave a Comment</div>
-							<div class="row border-line-v">
-								<div class="col col-m-12 col-t-12 col-d-12">
-									<div class="post-box">
-										<form id="cform" method="post">
-											<div class="row">
-												<div class="col col-d-12 col-t-12 col-m-12">
-													<div class="group-val">
-														<input type="text" name="name" placeholder="Full Name" />
-													</div>
-												</div>
-												<div class="col col-d-12 col-t-12 col-m-12">
-													<div class="group-val">
-														<textarea name="message" placeholder="Your Message"></textarea>
-													</div>
-												</div>
-											</div>
-											<div class="align-left">
-												<a href="#" class="button"
-													onclick="$('#cform').submit(); return false;">
-													<span class="text">Add Comment</span>
-													<span class="arrow"></span>
-												</a>
-											</div>
-										</form>
-										<div class="alert-success">
-											<p>Thanks, your message is sent successfully.</p>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -442,187 +279,9 @@
 				</div>
 			</div>
 
-			<!--
-				Card - Contacts
-			-->
-			<div class="card-inner contacts" id="contacts-card">
-				<div class="card-wrap">
-
-					<!--
-						Conacts Info
-					-->
-					<div class="content contacts">
-
-						<!-- title -->
-						<div class="title">Get in Touch</div>
-
-						<!-- content -->
-						<div class="row">
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="map" id="map"></div>
-								<div class="info-list">
-									<ul>
-										<li><strong>Address . . . . .</strong> California, USA</li>
-										<li><strong>Email . . . . .</strong> adlard@example.com</li>
-										<li><strong>Phone . . . . .</strong> +123 654 78900</li>
-										<li><strong>Freelance . . . . .</strong> Available</li>
-									</ul>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-
-					</div>
-
-					<!--
-						Contact Form
-					-->
-					<div class="content contacts">
-
-						<!-- title -->
-						<div class="title">Contact Form</div>
-
-						<!-- content -->
-						<div class="row">
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="contact_form">
-									<form id="cform" method="post">
-										<div class="row">
-											<div class="col col-d-6 col-t-6 col-m-12">
-												<div class="group-val">
-													<input type="text" name="name" placeholder="Full Name" />
-												</div>
-											</div>
-											<div class="col col-d-6 col-t-6 col-m-12">
-												<div class="group-val">
-													<input type="text" name="email" placeholder="Email Address" />
-												</div>
-											</div>
-											<div class="col col-d-12 col-t-12 col-m-12">
-												<div class="group-val">
-													<textarea name="message" placeholder="Your Message"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="align-left">
-											<a href="#" class="button" onclick="$('#cform').submit(); return false;">
-												<span class="text">Send Message</span>
-												<span class="arrow"></span>
-											</a>
-										</div>
-									</form>
-									<div class="alert-success">
-										<p>Thanks, your message is sent successfully.</p>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
 
 		</div>
 
-		<div class="s_overlay"></div>
-		<div class="content-sidebar">
-			<div class="sidebar-wrap search-form">
-				<aside id="secondary" class="widget-area">
-					<section id="search-2" class="widget widget_search">
-						<label>
-							<span class="screen-reader-text">Search for:</span>
-							<input type="search" class="search-field" placeholder="Search …" value="" name="s">
-						</label>
-						<input type="submit" class="search-submit" value="Search">
-					</section>
-					<section class="widget widget_recent_entries">
-						<h2 class="widget-title">
-							<span class="widget-title-span"><span class="first-word">Recent</span> Posts</span>
-						</h2>
-						<ul>
-							<li>
-								<a href="#">Creativity Is More Than</a>
-							</li>
-							<li>
-								<a href="#">Designing the perfect</a>
-							</li>
-							<li>
-								<a href="#">Music Player Design</a>
-							</li>
-							<li>
-								<a href="#">A Song And Dance Act</a>
-							</li>
-							<li>
-								<a href="#">By spite about do of allow</a>
-							</li>
-						</ul>
-					</section>
-					<section class="widget widget_recent_comments">
-						<h2 class="widget-title">
-							<span class="widget-title-span"><span class="first-word">Recent</span> Comments</span>
-						</h2>
-						<ul>
-							<li class="recentcomments">
-								<span class="comment-author-link">JOHN SMITH</span> on <a href="#">Creativity Is More
-									Than</a>
-							</li>
-							<li class="recentcomments">
-								<span class="comment-author-link">ADAM SMITH</span> on <a href="#">Creativity Is More
-									Than</a>
-							</li>
-							<li class="recentcomments">
-								<span class="comment-author-link">admin</span> on <a href="#">Designing the perfect</a>
-							</li>
-							<li class="recentcomments">
-								<span class="comment-author-link">admin</span> on <a href=#">Designing the perfect</a>
-							</li>
-							<li class="recentcomments">
-								<span class="comment-author-link">James</span> on <a href="#">Designing the perfect</a>
-							</li>
-						</ul>
-					</section>
-					<section class="widget widget_archive">
-						<h2 class="widget-title">
-							<span class="widget-title-span">
-								<span class="first-letter">Archives</span>
-							</span>
-						</h2>
-						<ul>
-							<li>
-								<a href="#">November 2018</a>
-							</li>
-						</ul>
-					</section>
-					<section class="widget widget_categories">
-						<h2 class="widget-title">
-							<span class="widget-title-span"><span class="first-letter">Categories</span></span>
-						</h2>
-						<ul>
-							<li class="cat-item cat-item-2">
-								<a href="#">Design</a>
-							</li>
-							<li class="cat-item cat-item-3">
-								<a href="#">Music</a>
-							</li>
-						</ul>
-					</section>
-					<section class="widget widget_meta">
-						<h2 class="widget-title">
-							<span class="widget-title-span"><span class="first-letter">Meta</span></span>
-						</h2>
-						<ul>
-							<li><a href="#">Log in</a></li>
-							<li><a href="#">Entries feed</a></li>
-							<li><a href="#">Comments feed</a></li>
-							<li><a href="#">WordPress.org</a></li>
-						</ul>
-					</section>
-				</aside>
-			</div>
-			<span class="close"></span>
-		</div>
 
 	</div>
 
