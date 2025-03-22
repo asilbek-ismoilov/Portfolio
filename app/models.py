@@ -30,6 +30,7 @@ class Work(models.Model):
     image = models.ImageField(upload_to='Images/work')
     category = models.ForeignKey(WorkCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=100) 
+    dictionary = models.TextField()
 
     def __str__(self):
         return f"{self.name} ({self.category})"
